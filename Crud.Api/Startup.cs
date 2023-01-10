@@ -59,8 +59,9 @@ namespace Crud.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Crud.Api v1"));
             }
-
+            app.UseCors("default");
             app.UseRouting();
+            
 
             app.UseAuthorization();
 
